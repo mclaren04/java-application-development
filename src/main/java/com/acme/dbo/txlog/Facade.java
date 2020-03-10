@@ -1,16 +1,19 @@
 package com.acme.dbo.txlog;
 
 public class Facade {
+
+    private static final String PRIVITIVE_FORMAT = "primitive";
+
     public static void log(int message) {
-        write("primitive", String.valueOf(message));
+        write(PRIVITIVE_FORMAT, String.valueOf(message));
     }
 
     public static void log(byte message) {
-        write("primitive", String.valueOf(message));
+        write(PRIVITIVE_FORMAT, String.valueOf(message));
     }
 
     public static void log(boolean message){
-        write("primitive", String.valueOf(message));;
+        write(PRIVITIVE_FORMAT, String.valueOf(message));;
     }
 
     public static void log(Object message){
